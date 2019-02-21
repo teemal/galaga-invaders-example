@@ -7,9 +7,13 @@ class Alien
 
   attr_accessor :x, :y
 
-  def initialize
-    @x = 200
-    @y = 200
+  def initialize(args)
+    @x = args[:x]
+    @y = args[:y]
+  end
+
+  def defaults
+    {:x => 200, :y => 200}
   end
 
   def move
@@ -23,14 +27,13 @@ class Alien
     "👾 (#{x}, #{y})"
   end
 
-  def fire(missiles)
-    missile = Missile.new(x, bottom_edge)
-    missile.launch(10)
-    missiles.add(missile)
+  def fire() #fire previously needed to know too much about missile class
+    self.x
+    self.y
   end
 
-  def bottom_edge
-    y + HEIGHT / 2
-  end
+  # def bottom_edge
+  #   y + HEIGHT / 2
+  # end
 
 end
