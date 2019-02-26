@@ -14,7 +14,7 @@ class Ship
   end
 
   def muzzle_location
-    Vector.new(location.x, top_edge)
+    Vector.new(@location)
   end
 
   def move_left
