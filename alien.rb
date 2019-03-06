@@ -1,5 +1,5 @@
 class Alien < Structure
-
+  include Drawing
   def initialize(args)
     super
     @sprite = args.fetch[:sprite]
@@ -10,3 +10,15 @@ class Alien < Structure
   end
 
 end
+
+# module Aliening
+
+# 	def sprite
+
+# 	end
+
+# 	def draw
+
+# 	end
+
+# end

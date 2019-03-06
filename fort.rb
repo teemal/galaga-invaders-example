@@ -1,5 +1,7 @@
 class Fort < Structure
-
+  include Drawing
+  include Destroyable
+  include Damaging
   def initialize(args)
     super
     @sprite = args.fetch[:sprite]
@@ -10,3 +12,20 @@ class Fort < Structure
   end
 
 end
+
+
+
+
+
+
+# module Forting
+
+# 	def sprite
+
+# 	end
+
+# 	def draw
+
+# 	end
+
+# end
